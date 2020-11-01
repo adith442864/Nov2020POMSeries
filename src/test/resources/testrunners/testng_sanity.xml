@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Insightly Test automtion sanity suite" parallel="tests" thread-count="10" verbose="1">
+
+<listeners>
+		<listener class-name="com.qa.insightly.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.insightly.listeners.TestAllureListener" />
+		<!--  listener class-name="com.qa.insightly.listeners.ScreenshotListener" />
+		<listener class-name="com.qa.insightly.listeners.pdfListener" />
+ 		<listener class-name="com.qa.insightly.listeners.TesultsListener" />-->
+		
+	</listeners>
+	
+	<test name="Login page Test - FF">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.insightly.tests.LoginPageTest"/>
+		</classes>
+
+	</test>
+	
+	<!--  test name="Login page Test - Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.insightly.tests.LoginPageTest"/>
+		</classes>
+	</test> -->
+	
+	<!--  test name="Login page Test - firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.insightly.tests.HomePageTest"/>
+		</classes>
+	</test>
+	
+	<test name="Login page Test - chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.insightly.tests.HomePageTest"/>
+		</classes>
+	</test> -->
+
+	
+	
+</suite>
